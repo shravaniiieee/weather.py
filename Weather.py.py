@@ -15,7 +15,7 @@ root.resizable(False,False)
 def getWeather():
     city=textfield.get()
 
-    geolocator= Nominatim(user_agent="geoapiExercises")
+    geolocator= Nominatim(user_agent="Weather")
     location= geolocator.geocode(city)
     obj = TimezoneFinder()
     result = obj.timezone_at(lng=location.longitude,lat=location.latitude)
